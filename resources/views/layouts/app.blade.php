@@ -20,7 +20,7 @@
      <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
      <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
      <!-- Custom JS -->
-     <script src="{{ asset('js/custom.js') }}" crossorigin="anonymous"></script>
+     <script src="{{ asset('js/script.js') }}" crossorigin="anonymous"></script>
  </head>
 
  <body class="bg-gradient-to-br from-gray-50 to-white font-poppins">

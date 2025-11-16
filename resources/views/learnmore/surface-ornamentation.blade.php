@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Ensures proper rendering and touch zooming on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Course Description</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="single-course.css">
-</head>
-<body>
+@extends('layouts.app')
 
-      <!-- ================= HEADER ================= -->
-  
+@section('content')
 
     <!-- 
       This is the main section for the single course.
@@ -86,9 +75,4 @@
 
 
        <!-- ================= FOOTER ================= -->
-
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+@endsection

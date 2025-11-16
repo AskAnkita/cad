@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capital Academy of Design</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="gallery.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
+@extends('layouts.app')
 
-
-
-<!-- gallery section -->
-
-
+@section('content')
 
 <main class="cad-gallery-section">
   <h1 class="cad-gallery-title">Student Works & Studio Moments</h1>
@@ -33,7 +19,4 @@
 </main>
 
 <!-- gallery section  end here-->
-
-<script src="script.js"></script>
-</body>
-</html>
+@endsection
