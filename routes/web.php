@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 
 /* GET home page */
 
@@ -28,11 +30,6 @@ Route::get('/about', function () {
 Route::get('/gallery', function () {
     return view('gallery', ['title' => 'Gallery']);
 })->name('gallery');
-
-/* GET login page */
-Route::get('/login', function () {
-    return view('login', ['title' => 'Login']);
-})->name('login');
 
 /* GET Advance Business Accounting page */
 Route::get('/advance-business-accounting', function () {
@@ -92,3 +89,23 @@ Route::group(['prefix' => 'contacts'], function () {
     Route::put('/{contact}', [ContactController::class, 'update'])->name('contacts.update');  // Update a specific contact
     Route::delete('/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');  // Delete a specific contact
 });
+
+
+
+
+// --------------- Auth mangaement routes ----------------
+// Show the login form
+Route::get('/login', function () {
+    return view('login', ['title' => 'Login']);
+})->name('login');
+
+// Submit the login form
+Route::post('/login', [UserController::class, 'login'])->name('login.submit');
+
+// Dashboard (protected route)
+Route::middleware('auth')->get('/dashboard',  [UserController::class, 'dashboard'])->name('dashboard');
+Route::middleware('auth')->get('/inquries',  [UserController::class, 'inquries'])->name('inquries');
+Route::middleware('auth')->delete('{id}',  [UserController::class, 'deleteInqury'])->name('delete_inqury');
+
+// Handle logout
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');
