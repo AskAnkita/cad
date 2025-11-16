@@ -76,22 +76,17 @@ Route::get('/surface-ornamentation', function () {
     return view('learnmore.surface-ornamentation', ['title' => 'Surface Ornamentation']);
 })->name('surface-ornamentation');
 
-
-
 // ---- Contact Management Routes ----
 
 Route::group(['prefix' => 'contacts'], function () {
-    Route::get('/', [ContactController::class, 'index'])->name('contacts.index');  // List all contacts
-    Route::get('/create', [ContactController::class, 'create'])->name('contacts.create');  // Show form to create a contact
-    Route::post('/', [ContactController::class, 'store'])->name('contacts.store');  // Store a new contact
-    Route::get('/{contact}', [ContactController::class, 'show'])->name('contacts.show');  // Show a specific contact
-    Route::get('/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');  // Show form to edit a contact
-    Route::put('/{contact}', [ContactController::class, 'update'])->name('contacts.update');  // Update a specific contact
-    Route::delete('/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');  // Delete a specific contact
+    // Show the contact form
+    Route::get('/', function () {
+        return view('contact');
+    });
+
+    // Handle form submission
+    Route::post('/', [ContactController::class, 'store'])->name('contact.submit');
 });
-
-
-
 
 // --------------- Auth mangaement routes ----------------
 // Show the login form
@@ -104,7 +99,6 @@ Route::post('/login', [UserController::class, 'login'])->name('login.submit');
 
 // Dashboard (protected route)
 Route::middleware('auth')->get('/dashboard',  [UserController::class, 'dashboard'])->name('dashboard');
-Route::middleware('auth')->get('/inquries',  [UserController::class, 'inquries'])->name('inquries');
 Route::middleware('auth')->delete('{id}',  [UserController::class, 'deleteInqury'])->name('delete_inqury');
 
 // Handle logout

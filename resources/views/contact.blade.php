@@ -38,29 +38,41 @@
             <div class="contact-page__grid-item contact-page__form-box fade-in">
                 <h2>Get in Touch</h2>
                 <p>Have questions? Fill out the form below, and our admissions team will contact you shortly.</p>
-                <form id="contact-page__form" action="/contact.html" method="POST">
-                    <div class="contact-page__form-group">
-                        <label for="contact-name">Name</label>
-                        <input type="text" id="contact-name" name="name" required>
-                    </div>
+                <div class="container mx-auto p-4">
+                    <!-- Success Message -->
+                    @if (session('success'))
+                        <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
-                    <div class="contact-page__form-group">
-                        <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email" name="email" required>
-                    </div>
+                    <!-- Contact Form -->
+                    <form id="contact-page__form" action="{{ route('contact.submit') }}" method="POST">
+                        @csrf
+                        <div class="contact-page__form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" required class="border p-2">
+                        </div>
 
-                    <div class="contact-page__form-group">
-                        <label for="contact-phone">Phone</label>
-                        <input type="tel" id="contact-phone" name="phone" required>
-                    </div>
+                        <div class="contact-page__form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required class="border p-2">
+                        </div>
 
-                    <div class="contact-page__form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" name="message" rows="5" required></textarea>
-                    </div>
+                        <div class="contact-page__form-group">
+                            <label for="contact-phone">Phone</label>
+                            <input type="tel" id="contact-phone" name="phone" required class="border p-2">
+                        </div>
+
+                        <div class="contact-page__form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required class="border p-2"></textarea>
+                        </div>
 
                     <button type="submit" class="contact-page__submit-btn">Send Message</button>
                 </form>
+
+                </div>
 
             </div>
 

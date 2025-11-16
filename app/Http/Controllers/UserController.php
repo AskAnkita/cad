@@ -44,13 +44,6 @@ class UserController extends Controller
         return view('admin.dashboard', ['title' => 'CAD Dashboard',  'user' => $user, 'contacts' => $contacts, 'contactCounts' => $contactCounts, 'todaysContactsCounts' => $todaysContactsCounts]);
     }
 
-    // Show inquries
-    public function inquries()
-    {
-        $contacts = Contact::all();
-        return view('admin.inquries', ['title' => 'Inquiries', 'contacts' => $contacts]);
-    }
-
     public function deleteInqury($id)
     {
         $contact = Contact::find($id);
