@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
 /* GET home page */
+
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
 })->name('home');
@@ -82,16 +83,12 @@ Route::get('/surface-ornamentation', function () {
 
 // ---- Contact Management Routes ----
 
-Route::get('/', [ContactController::class, 'showContactForm'])->name('contact.form');  // Contact form
-
-Route::post('/', [ContactController::class, 'submitContactForm'])->name('contact.submit');  // Handle contact form submission
-
-// ---- Faculty Protected Routes ----
-
-Route::middleware(['auth', 'role:faculty'])->group(function () {
-    Route::get('/admin/dashboard', [ContactController::class, 'adminDashboard'])->name('admin.dashboard');  // Admin dashboard
-    Route::get('/admin/contacts', [ContactController::class, 'manageContacts'])->name('admin.contacts');  // Manage all contacts
-    Route::get('/admin/contacts/{contact}/edit', [ContactController::class, 'editContact'])->name('admin.contacts.edit');  // Edit a contact
-    Route::put('/admin/contacts/{contact}', [ContactController::class, 'updateContact'])->name('admin.contacts.update');  // Update a contact
-    Route::delete('/admin/contacts/{contact}', [ContactController::class, 'deleteContact'])->name('admin.contacts.delete');  // Delete a contact
+Route::group(['prefix' => 'contacts'], function () {
+    Route::get('/', [ContactController::class, 'index'])->name('contacts.index');  // List all contacts
+    Route::get('/create', [ContactController::class, 'create'])->name('contacts.create');  // Show form to create a contact
+    Route::post('/', [ContactController::class, 'store'])->name('contacts.store');  // Store a new contact
+    Route::get('/{contact}', [ContactController::class, 'show'])->name('contacts.show');  // Show a specific contact
+    Route::get('/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');  // Show form to edit a contact
+    Route::put('/{contact}', [ContactController::class, 'update'])->name('contacts.update');  // Update a specific contact
+    Route::delete('/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');  // Delete a specific contact
 });

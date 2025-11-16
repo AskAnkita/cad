@@ -58,11 +58,11 @@
                      <i class="fas fa-bars"></i>
                  </button>
                  <ul class="header-scope-nav-menu">
-                     <li><a href="/home.html">Home</a></li>
-                     <li><a href="/about.html">About</a></li>
-                     <li><a href="/course.html">Courses</a></li>
-                     <li><a href="/gallery.html">Gallery</a></li>
-                     <li><a href="/contact.html">Contact</a></li>
+                     <li><a href="{{ route('home') }}">Home</a></li>
+                     <li><a href="{{ route('about') }}">About</a></li>
+                     <li><a href="{{ route('course') }}">Courses</a></li>
+                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                     <li><a href="{{ route('contact') }}">Contact</a></li>
                  </ul>
              </nav>
          </div>
