@@ -19,6 +19,7 @@
      <link rel="stylesheet" href="{{ asset('css/about.css') }}">
      <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
      <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
      <!-- Custom JS -->
      <script src="{{ asset('js/script.js') }}" crossorigin="anonymous"></script>
  </head>
