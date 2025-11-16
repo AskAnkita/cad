@@ -164,57 +164,6 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <!-- ================= FOOTER ================= -->
-<footer class="footer-scope site-footer" style="background-color: #111827; color: #f3f4f6; padding: 50px 0; font-family: 'Poppins', sans-serif;">
-  <div class="footer-main" style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
-
-    <!-- About Section -->
-    <div class="footer-column" style="flex: 1; min-width: 250px;">
-      <h3 style="color: #fbbf24; font-size: 20px; margin-bottom: 15px;">Capital Academy of Design</h3>
-      <p style="line-height: 1.7; font-size: 14px;">
-        CAD Academy is a leading institute offering creative education in 
-        design, art, and digital skills. Our mission is to nurture creativity 
-        and empower students with industry-relevant knowledge.
-      </p>
-      <div class="social-icons" style="margin-top: 15px;">
-        <a href="#" style="color: #fbbf24; margin-right: 10px; font-size: 18px;"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" style="color: #fbbf24; margin-right: 10px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
-        <a href="#" style="color: #fbbf24; margin-right: 10px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" style="color: #fbbf24; font-size: 18px;"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-column" style="flex: 1; min-width: 180px;">
-      <h4 style="color: #fbbf24;">Quick Links</h4>
-      <ul style="list-style: none; padding: 0; margin-top: 10px;">
-        <li><a href="/home.html" style="color: #e5e7eb; text-decoration: none;">Home</a></li>
-        <li><a href="/course.html" style="color: #e5e7eb; text-decoration: none;">Courses</a></li>
-        <li><a href="/about.html" style="color: #e5e7eb; text-decoration: none;">About Us</a></li>
-        <li><a href="/gallery.html" style="color: #e5e7eb; text-decoration: none;">Gallery</a></li>
-        <li><a href="/contact.html" style="color: #e5e7eb; text-decoration: none;">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Get in Touch -->
-    <div class="footer-column" style="flex: 1; min-width: 250px;">
-      <h4 style="color: #fbbf24;">Get in Touch</h4>
-      <p style="line-height: 1.7; font-size: 14px;">
-        Capital Academy of Design<br />
-        Near Shankar Nagar Chapuati,<br />
-        Shankar Nagar Road, Raipur (C.G.), India.<br />
-        <strong>Phone:</strong> +91 9111112009<br />
-        <strong>Email:</strong> <a href="mailto:capitalacademy@gmail.com" style="color: #fbbf24;">capitalacademy@gmail.com</a>
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom" style="text-align: center; margin-top: 30px; border-top: 1px solid #374151; padding-top: 15px; font-size: 13px;">
-    <p>© 2025 Capital Academy of Design | All Rights Reserved</p>
-    <p>Designed with ❤️ by CAD Web Team</p>
-  </div>
-</footer>
 
 <script src="script.js"></script>
 </body>
